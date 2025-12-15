@@ -1,0 +1,121 @@
+:root {
+    --color-primary: #FF0000; 
+    --color-secondary: #222222; 
+    --color-background-light: #333333; 
+    --color-text-main: #FFFFFF; 
+    --color-text-secondary: #AAAAAA; 
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: var(--color-secondary); 
+    color: var(--color-text-main);
+    
+    /* ARCHITECTURE GLOBALE AVEC GRID */
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: 1fr; 
+    min-height: 100vh; 
+}
+
+/* TYPOGRAPHIE ET LIENS */
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-text-main);
+}
+
+
+header {
+    background-color: var(--color-background-light); 
+    padding: 6rem 2rem; 
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 3px solid var(--color-primary);
+}
+
+header h1 {
+    font-size: 3.5em; 
+    margin-bottom: 0.5rem;
+    letter-spacing: 3px;
+    color: var(--color-text-main);
+}
+
+header h2 {
+    font-size: 1.4em;
+    color: var(--color-primary); 
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: var(--color-text-main);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #CC0000;
+}
+
+/* CONTENU PRINCIPAL ET SECTIONS */
+main {
+    padding: 3rem 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto 3rem auto; 
+    padding: 2rem;
+    background-color: var(--color-background-light); 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); 
+}
+
+section h2 {
+    color: var(--color-primary); 
+    border-bottom: 2px solid var(--color-secondary);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-secondary); 
+    color: var(--color-text-secondary);
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; 
+    border-top: 1px solid var(--color-background-light);
+}
+
+.liens-sociaux a {
+    color: var(--color-text-secondary);
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+.liens-sociaux a:hover {
+    color: var(--color-primary);
+}
