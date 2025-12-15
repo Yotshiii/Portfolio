@@ -1,0 +1,9 @@
+/node_modules
+
+*.log
+.DS_Store # Pour macOS (par prudence)
+
+.env
+
+/dist
+/build
